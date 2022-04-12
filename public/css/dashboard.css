@@ -1,0 +1,77 @@
+#content-container{
+    padding-top: 20px;
+}
+.small-section{
+    width: 100%;
+    height: 250px;
+    background-color: rgb(255, 255, 255);
+    border-top: 7px solid #308403 ;
+    box-shadow: 0px 5px 10px -7px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.tbl-container{
+    margin-top: 20px;
+}
+
+.tbl-container nav .nav-link{
+    background-color: rgb(238, 238, 238);
+    border-top: 2px solid #ffc501;
+    border-right: 2px solid #ffc501;
+    border-left: 2px solid #ffc501;
+    border-bottom: 5px solid #ffc501;
+    border-radius: 10px 10px 0px 0px;
+    color: black;
+    margin-bottom: -5px;
+    margin-right: 0px;
+}
+.tbl-container nav .nav-link:hover{
+    background-color: rgb(255, 255, 255);
+    border-top: 2px solid #ffc501;
+    border-right: 2px solid #ffc501;
+    border-left: 2px solid #ffc501;
+    border-bottom: 5px solid #ffffff;
+    border-radius: 10px 10px 0px 0px;
+    color: black;
+    margin-bottom: -5px;
+    margin-right: 0px;
+}
+
+.tbl-container nav .nav-tabs{
+    border-color: #ffc501;
+    border-width: 5px;   
+}
+
+.tbl-container nav .nav-tabs{
+    padding-left: 5px;
+}
+
+.tbl-container nav .nav-tabs .active{
+    border-top: 2px solid #ffc501;
+    border-right: 2px solid #ffc501;
+    border-left: 2px solid #ffc501;
+    border-radius: 10px 10px 0px 0px;
+}
+
+
+h3{
+    font-size: 22px;
+}
+.tab-content{
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+#btn-create {
+    background: #308403;
+    border: none;
+    margin-bottom: 10px;
+  }
+
+
+
+
+

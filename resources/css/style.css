@@ -1,0 +1,206 @@
+body {
+}
+
+#banner {
+  color: rgb(33, 37, 41);
+  background: url("../../assets/img/background-banner.jpg") top / cover no-repeat, #ffffff;
+  height: 55vh;
+  position: relative;
+  margin-top: 71px;
+}
+
+@media (min-width: 576px) {
+  #banner {
+    color: rgb(33, 37, 41);
+    background: url("../../assets/img/background-banner.jpg") top / cover no-repeat, #ffffff;
+    height: 55vh;
+    position: relative;
+    margin-top: 93px;
+  }
+}
+
+@media (min-width: 992px) {
+  #banner {
+    color: rgb(33, 37, 41);
+    background: url("../../assets/img/background-banner.jpg") top / cover no-repeat, #ffffff;
+    height: 55vh;
+    position: relative;
+    margin-top: 102px;
+  }
+}
+
+#prio-logo {
+  width: 134px;
+  margin-top: -12px;
+  margin-bottom: -14px;
+  margin-right: -6px;
+}
+
+@media (min-width: 768px) {
+  #prio-logo {
+    width: 134px;
+    margin-top: -12px;
+    margin-bottom: -14px;
+    margin-right: -85px;
+  }
+}
+
+@media (min-width: 992px) {
+  #prio-logo {
+    width: 150px;
+    margin-top: -12px;
+    margin-bottom: -13px;
+    margin-right: 12px;
+  }
+}
+
+#title {
+  margin-bottom: 0;
+  font-size: 26px;
+  height: 32px;
+  display: none;
+}
+
+@media (min-width: 576px) {
+  #title {
+    margin-bottom: 0;
+    font-size: 26px;
+    height: 32px;
+    display: inherit;
+  }
+}
+
+#sub-title {
+  margin-bottom: 0;
+  display: none;
+}
+
+@media (min-width: 576px) {
+  #sub-title {
+    margin-bottom: 0;
+    display: inherit;
+  }
+}
+
+a:active {
+  color: #18bc9c;
+  border-bottom: 3px solid #18bc9c ;
+}
+
+#navcol-1 {
+  color: rgb(0,0,0);
+}
+
+#banner-pic {
+  height: 374px;
+  bottom: 0px;
+  position: absolute;
+  display: none;
+}
+
+@media (min-width: 992px) {
+  #banner-pic {
+    height: 50vh;
+    bottom: 0px;
+    position: absolute;
+    display: block;
+  }
+}
+
+#image-container {
+  position: relative;
+  padding-right: 0px;
+}
+
+#banner-content-container {
+  height: auto;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+#banner h2 {
+  color: rgb(255,255,255);
+  margin-bottom: 0px;
+  margin-top: 10vh;
+  font-size: 39px;
+}
+
+#banner h2 span {
+  color: #18bc9c;
+  font-size: 22px;
+}
+
+#banner h3 {
+  color: rgb(255,255,255);
+  font-size: 21.8px;
+  margin-bottom: 0px;
+  margin-top: 4px;
+}
+
+#banner-buttons-container {
+  margin: auto;
+  margin-top: 16px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+#banner p {
+  color: rgb(255,255,255);
+  margin-top: 25px;
+  margin-bottom: 29px;
+}
+
+#banner #btn-login {
+  background: #f39c12;
+  border: none;
+}
+
+#banner #btn-register {
+  background: #18bc9c;
+  width: 127.6px;
+  border: none;
+}
+
+#info .info-icon {
+  width: 100px;
+  color: #ffffff;
+  margin-right: 24px;
+}
+
+#info .info-heading {
+  margin-bottom: 0px;
+  color: #33495e;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+#info .info-sub-heading {
+  color: #33495e;
+  font-size: 20px;
+}
+
+#info .Info-container {
+  margin: auto;
+  margin-top: 6vh;
+  margin-bottom: 6vh;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
+#homepage-footer {
+  background: #33495e;
+  width: 100%;
+  height: 8vh;
+}
+
+#homepage-footer p {
+  color: rgb(255,255,255);
+  margin-bottom: 0;
+  height: auto;
+}
+
+#homepage-footer p span a {
+  text-decoration: none;
+  color: #18bc9c;
+}
+

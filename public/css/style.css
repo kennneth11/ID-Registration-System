@@ -1,0 +1,578 @@
+
+
+
+/*  Start Home page    */
+
+
+.logo-text {
+  text-decoration: none;
+  color: #272727;
+}
+
+nav a{
+  text-decoration: none;
+  color: #272727;
+}
+
+#logo-text-container a:hover{
+  text-decoration: none;
+  color: #272727;
+}
+
+#banner {
+  color: rgb(33, 37, 41);
+  background: url("../images/banner.jpg") top / cover no-repeat, #ffffff;
+  position: relative;
+  margin-top: 71px;
+}
+
+@media (min-width: 576px) {
+  #banner {
+    color: rgb(33, 37, 41);
+    background: url("../images/banner.jpg") top / cover no-repeat, #ffffff;
+    height: 55vh;
+    position: relative;
+    margin-top: 93px;
+  }
+}
+
+@media (min-width: 992px) {
+  #banner {
+    color: rgb(33, 37, 41);
+    background: url("../images/banner.jpg") top / cover no-repeat, #ffffff;
+    height: 55vh;
+    position: relative;
+    margin-top: 102px;
+  }
+}
+
+#prio-logo {
+  width: 134px;
+  margin-top: -12px;
+  margin-bottom: -14px;
+  margin-right: -6px;
+}
+
+@media (min-width: 768px) {
+  #prio-logo {
+    width: 134px;
+    margin-top: -12px;
+    margin-bottom: -14px;
+    margin-right: -85px;
+  }
+}
+
+@media (min-width: 992px) {
+  #prio-logo {
+    width: 150px;
+    margin-top: -12px;
+    margin-bottom: -13px;
+    margin-right: 12px;
+  }
+}
+
+
+
+.navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav .nav-link.active {
+  color: #308403;
+  border-bottom: 3px solid #308403 ;
+}
+
+.navbar-light .navbar-nav .nav-link{
+  color: #000;
+}
+
+#navcol-1 {
+  color: rgb(255, 0, 0);
+}
+
+#banner-pic {
+  bottom: 0px;
+  position: absolute;
+  display: none;
+}
+
+@media (min-width: 992px) {
+  #banner-pic {
+    height: 50vh;
+    bottom: 0px;
+    position: absolute;
+    display: block;
+  }
+}
+
+#image-container {
+
+  padding-right: 0px;
+  display: none;
+}
+
+@media (min-width: 992px) {
+  #image-container {
+    position: relative;
+    padding-right: 0px;
+  }
+}
+
+#banner-content-container {
+  background-color:rgba(0, 0, 0, .7);
+  height: auto;
+  padding: 40px;
+  margin-top: 10%;
+}
+
+
+
+
+#title {
+  margin-bottom: 0;
+  font-size: 26px;
+  height: 32px;
+  display: none;
+}
+
+@media (min-width: 576px) {
+  #title {
+    margin-bottom: 0;
+    font-size: 26px;
+    height: 32px;
+    display: inherit;
+  }
+}
+
+#sub-title {
+  margin-bottom: 0;
+  display: none;
+}
+
+@media (min-width: 576px) {
+  #sub-title {
+    margin-bottom: 0;
+    display: inherit;
+  }
+}
+
+#banner p {
+  color: rgb(255,255,255);
+  margin-top: 25px;
+}
+
+#banner-buttons-container {
+  margin: auto;
+  margin-top: 16px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+#banner h2 {
+  color: rgb(255,255,255);
+  margin-bottom: 0px;
+  font-size: 39px;
+}
+
+#banner h2 span {
+  color: #308403;
+  font-size: 22px;
+}
+
+#banner h3 {
+  color: rgb(255,255,255);
+  font-size: 21.8px;
+  margin-bottom: 0px;
+  margin-top: 4px;
+}
+
+
+
+
+
+#banner #btn-login {
+  background: #ffc501;
+  border: none;
+  margin-top: 5px;
+}
+
+#banner #btn-register {
+  background: #308403;
+  width: 127.6px;
+  border: none;
+  margin-top: 5px;
+}
+
+
+
+#info .info-icon {
+  width: 100px;
+  height: auto;
+  color: #272727;
+  margin-right: 24px;
+}
+
+#info .info-heading {
+  margin-bottom: 0px;
+  color: #272727;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+#info .info-sub-heading {
+  color: #272727;
+  font-size: 20px;
+}
+
+#info .Info-container {
+  margin: auto;
+  height: 10vh;
+  margin-top: 6vh;
+  margin-bottom: 6vh;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
+footer{
+  margin: 0px;
+}
+
+.footer-fix{
+  position: fixed;
+  bottom: 40px;
+}
+
+#homepage-footer {
+  background:#272727 ;
+  width: 100%;
+  height: 8vh;
+}
+
+#homepage-footer p {
+  color: rgb(255,255,255);
+  margin-bottom: 0;
+  height: auto;
+}
+
+#homepage-footer p span a {
+  text-decoration: none;
+  color: #308403;
+}
+
+/*  End Home page    */
+
+
+
+
+
+
+
+
+
+
+/*  Start Login page    */
+
+#login-section #heading-container {
+  background: rgb(255,255,255);
+  padding-top: 17px;
+  padding-bottom: 0px;
+  height: 56px;
+  border-top: 7px solid #308403 ;
+  border-bottom: 1px solid rgb(197,197,197) ;
+}
+
+#login-section #heading-text {
+  font-size: 20px;
+}
+
+#login-section #body-container {
+  padding: 40px;
+  background: #eeeeee;
+  padding-top: 0;
+}
+
+#about-h2 {
+  color: rgb(255,255,255);
+  margin-top: 100px;
+  font-size: 39px;
+}
+
+
+#about-h3 {
+  color: rgb(255,255,255);
+  font-size: 21.8px;
+  margin-bottom: 0px;
+  margin-top: 4px;
+}
+
+#login-section #login-form {
+  padding: 0pc;
+  background: rgb(255,255,255);
+  box-shadow: 0px 9px 22px -7px;
+  width: 430px;
+  margin: 79px;
+}
+
+#login-section #login-section {
+  background: rgb(255,255,255);
+  color: rgb(33, 37, 41);
+  padding: auto;
+  padding-right: 0;
+  padding-left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+#login-section .forgot {
+  text-decoration: none;
+  color: #ff0000;
+  font-size: 14px;
+}
+
+
+
+#login-section #login-logo {
+  width: 153px;
+}
+
+#login-section #note-content {
+  text-align: justify;
+}
+
+#login-section #singin {
+  font-size: 15px;
+  background: #308403;
+  border: none;
+}
+
+#login-section #student {
+  font-size: 15px;
+  background: #308403;
+  border: none;
+  margin-top: 50px;
+}
+
+#login-section #employee {
+  font-size: 15px;
+  background: #ffc501;
+  border: none;
+  margin-bottom: 25px;
+}
+
+#login-section .back-to-site {
+  text-decoration: none;
+  color: #308403;
+  font-weight: bold;
+  font-size: 15px;
+  margin-top: -11px;
+}
+
+#login-section #note {
+  margin-top: 14px;
+  margin-bottom: 25px;
+  font-size: 16px;
+}
+
+#login-section .input-title {
+  font-size: 15px;
+}
+
+#login-section .input-data {
+  font-size: 15px;
+}
+
+#login-section .reminder {
+  font-size: 15px;
+}
+
+
+
+
+
+
+/*  End Login page    */
+
+/*  End About  page    */
+
+#prio-logo2{
+  width: 350px;
+  margin-bottom: -100px;
+}
+
+#about-content-container{
+  background-color:rgba(0, 0, 0, .7);
+  height: auto;
+  padding: 0 50px 50px 50px;
+}
+
+.about-banner{
+  padding-top: 3%;
+  padding-bottom: 5%;
+}
+
+
+
+/*  End About page    */
+
+
+
+
+
+
+
+
+
+/*  End FAQ  page    */
+#faq {
+  color: rgb(33, 37, 41);
+  margin-top: 71px;
+}
+
+@media (min-width: 576px) {
+  #faq {
+    color: rgb(33, 37, 41);
+     margin-top: 100px;
+  }
+}
+
+@media (min-width: 992px) {
+  #faq {
+    color: rgb(33, 37, 41);
+    margin-top: 110px;
+  }
+}
+
+
+#faq .header{
+  background-color: #ecf0f1;
+  padding: 20px 0 20px 0;
+}
+
+#faq .header h1{
+  font-weight: bold;
+  margin: 0px;
+  font-size: 23px;
+}
+
+#faq h2{
+  font-weight: bold;
+  margin: 0px;
+  font-size: 19px;
+  margin-bottom: 10px;
+}
+
+#faq .content{
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+
+@media (min-width: 992px) {
+  #faq .content{
+    margin-top: 8vh;
+    margin-bottom: 5vh;
+  }
+}
+
+#faq .questions-item{
+  width: 100%;
+  background-color: #ecf0f1;
+  padding: 5px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+@media (min-width: 992px) {
+  #faq .questions-item{
+    
+    width: 80%;
+  }
+}
+
+#faq .collapse , .multi-collapse{
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  #faq .collapse , .multi-collapse{
+    width: 80%;
+  }
+}
+
+#faq .questions-item h5{
+  margin: 5px;
+  font-size: 15px;
+}
+
+
+
+
+
+/*  End FAQ page    */
+
+/*  Start Contact us page   */
+
+
+
+
+#contact-us{
+background: url("../images/map-background.jpg") center / contain no-repeat;
+background-color: #f5f5f5;
+width: 100%;
+margin-top: 80px;
+margin-bottom: 0px;
+}
+
+@media (min-width: 576px) {
+  #contact-us{
+    margin-top: 100;
+    }
+}
+
+@media (min-width: 992px) {
+  #contact-us{
+    margin-top: 115px;
+    }
+}
+
+#contact-us .container{
+  width: 100%;
+  margin-bottom: 0px;
+  padding: 25px 0 25px 0;
+}
+
+@media (min-width: 576px) {
+  
+}
+
+@media (min-width: 992px) {
+  #contact-us .container{
+    width: 50%;
+
+  }
+}
+
+#contact-us h3{
+  font-weight: bold;
+  margin: 0px;
+  font-size: 28px;
+}
+
+#contact-us h4{
+  margin-top: 40px;
+  font-size: 25px;
+}
+
+#contact-us h5 span{
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#contact-us form{
+  margin-top: 40px;
+}
+
+#contact-us button{
+  background: #308403;
+  border: none;
+}
+
+
+
+/*  End Contact us page    */
