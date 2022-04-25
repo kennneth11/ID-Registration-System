@@ -2,6 +2,7 @@
 
 @section('content')
 
+
 <div id="wrapper" class="wrapper">
     <div id="sidebar-wrapper">
         <div id="brand"><a class="d-flex align-items-center" href="#" style="height: 56px;"><img src="{{ asset('images/prio-logo-black.png') }}">
@@ -78,14 +79,22 @@
                                     <th>ID #</th>
                                     <th>Name</th>
                                     <th>Email Address</th>
+                                    <th>Action</th>
                                 </tr>
                                 @foreach($administrators as $user)
                                 <tr>
                                     <td>{{$user['id']}}</td>
                                     <td>{{$user['name']}}</td>
                                     <td>{{$user['email']}}</td>
+                                    <td>
+                                        <button onclick="sendid({{$user['id']}}, '{{$user['name']}}', '{{$user['email']}}')" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                            View
+                                        </button>
+                                    </td>
                                 </tr>
+
                                 @endforeach
+                                
                                 </table>
                             </div>
 
@@ -108,6 +117,24 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-section modal-content">
+            <div class="modal-body">
+                <div class="d-flex justify-content-end">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
+                </div>
+                <h6 id="id">awdawdawdawdawd</h6>
+                <h6 id="name"></h6>
+                <h6 id="email"></h6>
+                <h6>awdawdawdawdawd</h6>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                
             </div>
         </div>
     </div>

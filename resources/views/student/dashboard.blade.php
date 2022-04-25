@@ -23,9 +23,7 @@
                     <li class="nav-item" style="width: 100%;"><a class="nav-link d-flex align-items-center active" href="{{ route('dashboard') }}" style="width: 100%;padding: 12px;">
                     <div class="link-icons-container" style="width: 25%;"><i class="fa fa-home link-icons"></i></div>Dashboard</a>
                     </li>
-                    <li class="nav-item" style="width: 100%;"><a class="nav-link d-flex align-items-center" href="index.html" style="width: 100%;padding: 12px;">
-                        <div class="link-icons-container" style="width: 25%;"><i class="fa fa-users link-icons"></i></div>User Management</a>
-                    </li>
+                    
                 </ul>
             </div>
         </nav>
@@ -59,11 +57,11 @@
     </nav>
     <div class="page-content-wrapper">
         <div class="container-fluid" id="content-container">
+            <h2>Student Dashboard</h2>
             <div class="row">
                 <div class="col-md-12">
-                    <div class="tbl-container">
-                        <h1>Student Dashboard</h1>
-                        <div class="tab-content">
+                    <div class="tbl-container green-border">
+                        <div class="tab-content" style="width: 100%;">
                             <div class="position-relative m-4">
                                 <div class="progress" style="height: 1px;">
                                     <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
@@ -72,10 +70,68 @@
                                 <button type="button" class="position-absolute top-0 start-50 translate-middle btn btn-sm btn-primary rounded-pill" style="width: 2rem; height:2rem;">2</button>
                                 <button type="button" class="position-absolute top-0 start-100 translate-middle btn btn-sm btn-secondary rounded-pill" style="width: 2rem; height:2rem;">3</button>
                             </div>
-                            <p>Paragraph</p>
+                            
+
+                            <div class="tab-pane fade show active" id="nav-requested" role="tabpanel" aria-labelledby="nav-requested-tab">
+                                <h3>My Transation</h3>
+                                <table class="table table-striped">
+                                <tr>
+                                    <th>Transation #</th>
+                                    <th>ID #</th>
+                                    <th>Name</th>
+                                    <th>Action</th>
+                                </tr>
+                                @foreach($transactions as $transaction)
+                                    @if($transaction->id_number == Auth::user()->id)
+                                    <tr>    
+                                        <td>{{$transaction->id}}</td>
+                                        <td>{{$transaction->id_number}}</td>
+                                        <td>{{$transaction->name}}</td>
+                                        <td>
+                                            <button onclick="sendTransationID({{$transaction->id}}, '{{$transaction->or_number}}', '{{$transaction->id_number}}', '{{$transaction->name}}', '{{$transaction->course}}', '{{$transaction->college}}', '{{$transaction->blood_type}}', '{{$transaction->date_of_birth}}', '{{$transaction->present_address}}', '{{$transaction->permanent_address}}', '{{$transaction->contact_person_name}}', '{{$transaction->contact_person_number}}', '{{$transaction->status}}', '{{$transaction->active}}',)" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                View
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    @endif
+                                @endforeach
+                                </table>
+                            </div>
+
+
+
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-section modal-content">
+            <div class="modal-body">
+                <div class="d-flex justify-content-end">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
+                </div>
+                <h6 id="id"></h6>
+                <h6 id="orNumber"></h6>
+                <h6 id="idNumber"></h6>
+                <h6 id="Name"></h6>
+                <h6 id="course"></h6>
+                <h6 id="college"></h6>
+                <h6 id="bloodType"></h6>
+                <h6 id="birthDate"></h6>
+                <h6 id="presentAddress"></h6>
+                <h6 id="permanentAddress"></h6>
+                <h6 id="contactPersonName"></h6>
+                <h6 id="contactPersonNumber"></h6>
+                <h6 id="status"></h6>
+                <h6 id="active"></h6>
+                <h6></h6>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                
             </div>
         </div>
     </div>

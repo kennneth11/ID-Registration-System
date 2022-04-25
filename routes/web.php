@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controller\TransactionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,6 +40,7 @@ Route::group(['middleware' => ['auth', 'role:administrator']], function() {
     Route::get('/dashboard/user-management', 'App\Http\Controllers\UserManagementController@index')->name('dashboard.user-management');
     Route::get('/dashboard/user-management/create', 'App\Http\Controllers\UserManagementController@create')->name('dashboard.user-management.create');
     Route::post('/dashboard/user-management/creating', 'App\Http\Controllers\UserManagementController@store')->name('dashboard.user-management.creating');
+    
 
 });
 

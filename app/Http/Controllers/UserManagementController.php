@@ -48,4 +48,6 @@ class UserManagementController extends Controller
         return redirect()->route('dashboard.user-management');
     
     }
+
+
 }

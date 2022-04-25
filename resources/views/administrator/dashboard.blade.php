@@ -94,19 +94,22 @@
                                 <table class="table table-striped">
                                 <tr>
                                     <th>Transation #</th>
+                                    <th>ID #</th>
                                     <th>Name</th>
-                                    <th>OR #</th>
+                                    <th>Action</th>
                                 </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Alfreds Futterkiste</td>
-                                    <td>2</td>
+                                @foreach($transactions as $transaction)
+                                <tr>    
+                                    <td>{{$transaction->id}}</td>
+                                    <td>{{$transaction->id_number}}</td>
+                                    <td>{{$transaction->name}}</td>
+                                    <td>
+                                        <button onclick="sendTransationID({{$transaction->id}}, '{{$transaction->or_number}}', '{{$transaction->id_number}}', '{{$transaction->name}}', '{{$transaction->course}}', '{{$transaction->college}}', '{{$transaction->blood_type}}', '{{$transaction->date_of_birth}}', '{{$transaction->present_address}}', '{{$transaction->permanent_address}}', '{{$transaction->contact_person_name}}', '{{$transaction->contact_person_number}}', '{{$transaction->status}}', '{{$transaction->active}}',)" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                            View
+                                        </button>
+                                    </td>
                                 </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Centro comercial Moctezuma</td>
-                                    <td>1</td>
-                                </tr>
+                                @endforeach
                                 </table>
                             </div>
 
@@ -118,21 +121,40 @@
                                     <th>Name</th>
                                     <th>OR #</th>
                                 </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Alfreds Futterkiste</td>
-                                    <td>2</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Centro comercial Moctezuma</td>
-                                    <td>1</td>
-                                </tr>
                                 </table>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-section modal-content">
+            <div class="modal-body">
+                <div class="d-flex justify-content-end">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
+                </div>
+                <h6 id="id"></h6>
+                <h6 id="orNumber"></h6>
+                <h6 id="idNumber"></h6>
+                <h6 id="Name"></h6>
+                <h6 id="course"></h6>
+                <h6 id="college"></h6>
+                <h6 id="bloodType"></h6>
+                <h6 id="birthDate"></h6>
+                <h6 id="presentAddress"></h6>
+                <h6 id="permanentAddress"></h6>
+                <h6 id="contactPersonName"></h6>
+                <h6 id="contactPersonNumber"></h6>
+                <h6 id="status"></h6>
+                <h6 id="active"></h6>
+                <h6></h6>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                
             </div>
         </div>
     </div>

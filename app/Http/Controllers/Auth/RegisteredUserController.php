@@ -44,7 +44,7 @@ class RegisteredUserController extends Controller
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
-        $user->attachRole('student');
+        $user->attachRole('administrator');
 
         event(new Registered($user));
 
