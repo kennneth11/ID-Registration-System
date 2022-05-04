@@ -48,7 +48,7 @@
                         <p id="note-content" style="font-size: 14px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at quam neque. Vivamus suscipit at orci at lobortis. Vivamus nulla sem, fermentum et sodales sed, rutrum vitae nunc. Integer eleifend nunc ut dictum auctor.</p>
                     </div>
                     <p class="text-center reminder">Do not have an account?</p>
-                    <div class="mb-3 "><a href="{{ route('register') }}" class="btn btn-light areatre-account" type="button" style="width: 100%;border-color: rgb(206,212,218);border-bottom-style: solid;font-weight: bold;font-size: 15px;">Create an Account</a></div>
+                    <div class="mb-3 "><a href="{{ route('registerto') }}" class="btn btn-light areatre-account" type="button" style="width: 100%;border-color: rgb(206,212,218);border-bottom-style: solid;font-weight: bold;font-size: 15px;">Create an Account</a></div>
                     <a class="d-flex justify-content-center back-to-site " href="{{ url('/') }}">Back to Site</a>
                 </div>
             </form>

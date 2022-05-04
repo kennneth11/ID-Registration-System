@@ -12,9 +12,7 @@
 <body>
     <section class="d-flex justify-content-center align-items-center" id="login-section">
         <div class="container text-start d-flex justify-content-center align-items-center" style="width: 1315px;">
-
-
-            <form id="login-form" method="POST" action="{{ route('register') }}">
+            <form id="login-form" method="POST" action="{{ route('validate') }}">
                 @csrf
                 <div id="heading-container">
                     <h2 class="text-center" id="heading-text">ID Registration System</h2>
@@ -22,30 +20,24 @@
                 <div id="body-container">
                     <div class="text-center" id="logo-container" style="min-width: 0px;margin: 0px;margin-top: 0;margin-bottom: 0px;"><img id="login-logo" src="{{ asset('images/276134669_739682396993313_6310725528540388378_n.png') }}"></div>
                     <div class="mb-3">
-                        <input id="id" style="display:none;" type="text" name="id" placeholder="id" value="{{ request()->get('id') }}" required autocomplete="id" autofocus>    
-                    </div>
-                    <div class="mb-3">
-                       
-                        <label class="input-title">{{ __('Email Address') }}</label>
-                        <input id="email" type="email" class="form-control input-data @error('email') is-invalid @enderror" name="email" placeholder="Email Address" value="{{ old('email') }}" required autocomplete="email" autofocus>
-                        @error('email')
+                        <label class="input-title">{{ __('Student ID No.*') }}</label>
+                        <input id="id" type="text" class="form-control input-data" name="id" placeholder="id" pattern="[0-9]+" required autocomplete="id" autofocus>
+                        @error('id')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
                         @enderror
                     </div>
                     <div class="mb-3">
-                        <label class="input-title">{{ __('Password') }}</label>
-                        <input id="password" type="password" class="form-control input-data @error('password') is-invalid @enderror" name="password" placeholder="Password" required autocomplete="new-password" >
-                    </div>
-                    <div class="mb-3">
-                        <label class="input-title">{{ __('Confirm Password') }}</label>
-                        <input id="password_confirmation" type="password" class="form-control input-data @error('password') is-invalid @enderror" name="password_confirmation" placeholder="Confirm Password" required >
-                        @error('password')
+                        <label class="input-title">{{ __('Official Receipt No. or Registration No') }}</label>
+                        <input id="RegistrationNum" type="text" class="form-control" name="RegistrationNum" placeholder="O.R or Registration No."  pattern="[0-9]+" required autocomplete="RegistrationNum" autofocus>
+                        
+                        @error('RegistrationNum')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
                         @enderror
+                        
                     </div>
                     <div id="note">
                         <h6 style="font-size: 15px;">Note:&nbsp;</h6>

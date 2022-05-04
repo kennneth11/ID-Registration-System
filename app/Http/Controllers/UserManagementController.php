@@ -18,6 +18,7 @@ class UserManagementController extends Controller
     {
         $admindata = Role::where('name', 'administrator')->first()->users()->get();
         $studentdata = Role::where('name', 'student')->first()->users()->get();
+        
         return view('administrator/user-management/user-management',['administrators'=>$admindata],['students'=>$studentdata]);
         
     }

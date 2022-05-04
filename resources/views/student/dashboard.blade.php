@@ -104,37 +104,141 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
 
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-section modal-content">
-            <div class="modal-body">
-                <div class="d-flex justify-content-end">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="personal-info yellow-border">
+                        <h3>Personal Information</h3>
+                        @foreach($students as $student)
+                            @if($student->StudentNo == Auth::user()->id)
+                                <div class="container">
+                                    <h6>First Name: <p id="">{{$student->Firstname}}</p></h6><br>
+                                    <h6>Middle Name: <p id="">{{$student->MiddleName}}</p></h6><br>
+                                    <h6>Last Name: <p id="">{{$student->Lastname}}</p></h6><br>
+                                    <h6>Blood Type: <p id="">{{$student->BloodType}}</p></h6><br>
+                                    <h6>Gender: : <p id="">{{$student->Gender}}</p></h6><br>
+                                    <h6>Personal Mobile Number : <p id="">{{$student->StudentNo}}</p></h6><br>
+                                    <h6>Address: <p id="">{{$student->Perm_Address}}</p></h6><br>
+                                    <h6>Program Name : <p id="">{{$student->ProgName}}</p></h6><br>
+                                    <h6>College/Grade Name : <p id="">{{$student->CollegeName}}</p></h6><br>
+                                    <h6>Emergency Contact : <p id="">{{$student->Emergency_Contact}}</p></h6><br>
+                                    <h6>Emergency Mobile # : <p id="">{{$student->Emergency_MobileNo}}</p></h6><br>
+                                    <h6>Emergency Address : <p id="">{{$student->Emergency_Address}}</p></h6><br>
+
+                                    <a href="" class="btn btn-primary btn-modal-left" id="btn-create" type="button"></i>REQUEST ID</a>
+                                </div>
+                            @endif
+                        @endforeach
+                    </div>
                 </div>
-                <h6 id="id"></h6>
-                <h6 id="orNumber"></h6>
-                <h6 id="idNumber"></h6>
-                <h6 id="Name"></h6>
-                <h6 id="course"></h6>
-                <h6 id="college"></h6>
-                <h6 id="bloodType"></h6>
-                <h6 id="birthDate"></h6>
-                <h6 id="presentAddress"></h6>
-                <h6 id="permanentAddress"></h6>
-                <h6 id="contactPersonName"></h6>
-                <h6 id="contactPersonNumber"></h6>
-                <h6 id="status"></h6>
-                <h6 id="active"></h6>
-                <h6></h6>
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                
             </div>
         </div>
     </div>
 </div>
 
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-section modal-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3 modal-left">
+                        <div class="container">
+                            <div class="id-pic-container d-flex justify-content-center">
+                                <div id="id-pic">
+
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <a href="" class="btn btn-primary btn-modal-left" id="btn-create" type="button"></i>Edit Profile Picture</a>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <div id="signature">
+
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <a href="" class="btn btn-primary btn-modal-left" id="btn-create" type="button"></i>Edit Signature</a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-9">
+                        <div class="modal-outer d-flex justify-content-end">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
+                        </div>
+                        
+                        <div class="container">
+                            <h6 class="modal-title">A. Student Information</h6>
+                            <div class="modal-info container">
+                                <div class="row">
+                                    <div class="col">
+                                        <h6>Name: <p id="Name"></p></h6>
+                                    </div>
+                                    <div class="col">
+                                        <h6>Name: <p id="Name"></p></h6>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col">
+                                        <h6>Birthday: <p id="birthDate"></p></h6>
+                                    </div>
+                                    <div class="col">
+                                        <h6>Blood Type: <p id="bloodType"></p></h6>
+                                    </div>
+                                    <div class="col">
+                                        <h6>Gender: <p id="Name"></p></h6>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <h6>Personal Mobile Number: <p id="Name"></p></h6>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <h6>Permanent Address: <p id="permanentAddress"></p></h6>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <h6>Present Address: <p id="presentAddress"></p></h6>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h6 class="modal-title" style="margin-top: 35px;">B. Education Level</h6>
+
+                            <div class="modal-info container">
+                                <h6>Program Name: <p id="">awgsefwaeawdawd  awdawd faw</p></h6>
+                                <h6>College/Grade Name: <p id="college"></p></h6><br>
+                                <h6>Course/Strand Name: <p id="course"></p></h6>
+                                <h6 style="margin-left:10px">Section Name: <p id="Name"></p></h6>
+                            </div>
+
+                            <h6 class="modal-title" style="margin-top: 35px;">C. Contact Person Details</h6>
+                            <div class="modal-info container">
+                                <h6>Contact Person Name: <p id="contactPersonName">  </p></h6>
+                                <h6 style="margin-left:10px">Contact Person Number: <p id="contactPersonNumber"></p></h6><br>
+                                <h6>Contact Person Address: <p id=""></p></h6>
+                            </div>
+                        </div>
+
+                        
+                        <h6 class="qwer" id="id"></h6>
+                        <h6 class="qwer"  id="orNumber"></h6>
+                        <h6 class="qwer"  id="idNumber"></h6>
+                        <h6 class="qwer"  id="status"></h6>
+                        <h6 class="qwer"  id="active"></h6>
+                        
+                        <div class="modal-outer btn-modal d-flex justify-content-center">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+       </div>
+    </div>
+</div>
 @endsection

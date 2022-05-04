@@ -78,6 +78,8 @@ return [
             'sslmode' => 'prefer',
         ],
 
+
+
         'sqlsrv' => [
             'driver' => 'sqlsrv',
             'url' => env('DATABASE_URL'),
@@ -86,6 +88,19 @@ return [
             'database' => env('DB_DATABASE', 'forge'),
             'username' => env('DB_USERNAME', 'forge'),
             'password' => env('DB_PASSWORD', ''),
+            'charset' => 'utf8',
+            'prefix' => '',
+            'prefix_indexes' => true,
+        ],
+
+        'sqlsrv_MIS' => [
+            'driver' => 'sqlsrv',
+            'url' => env('DATABASE_URL'),
+            'host' => env('DB_HOST_MIS', 'localhost'),
+            'port' => env('DB_PORT_MIS', '1433'),
+            'database' => env('DB_DATABASE_MIS', 'forge'),
+            'username' => env('DB_USERNAME_MIS', 'forge'),
+            'password' => env('DB_PASSWORD_MIS', ''),
             'charset' => 'utf8',
             'prefix' => '',
             'prefix_indexes' => true,
