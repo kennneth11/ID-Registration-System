@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="icon" type="image/x-icon" href="{{ asset('images/prio-logo-white.png') }}">
     <title>Register</title>
     <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
@@ -19,13 +20,14 @@
                 <div id="heading-container">
                     <h2 class="text-center" id="heading-text">ID Registration System</h2>
                 </div>
+
                 <div id="body-container">
                     <div class="text-center" id="logo-container" style="min-width: 0px;margin: 0px;margin-top: 0;margin-bottom: 0px;"><img id="login-logo" src="{{ asset('images/276134669_739682396993313_6310725528540388378_n.png') }}"></div>
                     <div class="mb-3">
-                        <input id="id" style="display:none;" type="text" name="id" placeholder="id" value="{{ request()->get('id') }}" required autocomplete="id" autofocus>    
+                        <label class="input-title">{{ __('Student ID') }}</label>
+                        <input id="id" type="text" class="form-control input-data" name="id" value="{{ request()->id }}" required autocomplete="new-password" readonly>
                     </div>
                     <div class="mb-3">
-                       
                         <label class="input-title">{{ __('Email Address') }}</label>
                         <input id="email" type="email" class="form-control input-data @error('email') is-invalid @enderror" name="email" placeholder="Email Address" value="{{ old('email') }}" required autocomplete="email" autofocus>
                         @error('email')

@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="icon" type="image/x-icon" href="{{ asset('images/prio-logo-white.png') }}">
     <title>login</title>
     <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
@@ -30,8 +31,8 @@
                     </div>
                     <div class="mb-3">
                         <label class="input-title">{{ __('Password') }}</label>
-                        <input id="password" type="password" class="form-control input-data @error('password') is-invalid @enderror" name="password" placeholder="Password" required autocomplete="current-password">
-                        @error('password')
+                        <input id="password" type="password" class="form-control input-data @error('email') is-invalid @enderror" name="password" placeholder="Password" required autocomplete="current-password">
+                        @error('email')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>

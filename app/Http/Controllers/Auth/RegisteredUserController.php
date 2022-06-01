@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
+use App\Models\Transaction;
 use Illuminate\Support\Facades\DB;
 
 class RegisteredUserController extends Controller
@@ -35,27 +36,32 @@ class RegisteredUserController extends Controller
     public function store(Request $request)
     {
         $id = $request->id;
-        //$fullname = $request->fullname;
-        $MIS_stuedent = DB::connection('sqlsrv_MIS')->table('Student$')->where('StudentNo', $id)->first();
-        $fullname = $MIS_stuedent->Firstname . ' ' .  $MIS_stuedent->MiddleName . ' ' . $MIS_stuedent->Lastname;
+        //$userData = DB::connection('sqlsrv_MIS')->table('Student$')->first();
+        $userData = DB::connection('sqlsrv_MIS')->table('Student$')->get();
+        foreach($userData as $user){
+            if((int)$user->StudentNo == $request->id){
+                $fullname = $user->Firstname . ' ' .  $user->MiddleName . ' ' . $user->Lastname;
+            }
+        }
+
         $request->validate([
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
         $user = User::create([
-            'id' => $id,
+            'id'  => $id,
             'name' => $fullname,
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
-
-        $newUser = User::find($request->id);
+        $newUser = User::find($id);
         $newUser->attachRole('student');
 
         event(new Registered($newUser));
 
         Auth::login($newUser);
+
         return redirect(RouteServiceProvider::HOME);
     }
 
@@ -71,33 +77,22 @@ class RegisteredUserController extends Controller
 
     public function validateStudent(Request $request)
     {
-        $MISDatas = DB::connection('sqlsrv_MIS')->table('Student$')->get();
+        $MISData = DB::connection('sqlsrv_MIS')->table('Student$')->get();
         
         if (!(User::where('id', $request->id)->exists()) && (DB::connection('sqlsrv_MIS')->table('Student$')->where('StudentNo', $request->id)->exists()))
         {
-            
-            foreach($MISDatas as $data)
-            {
-                if($request->id == $data->StudentNo && $request->RegistrationNum == $data->RegID){
-                    $fullname = $data->Firstname . ' ' .  $data->MiddleName . ' ' . $data->Lastname;
-                    $id = round($data->StudentNo);
-                }  
-            }
-            
-            //return redirect()->route('register', [$id]);
-            return redirect()->route('register',['id'=>$id]);
-
+            if(DB::connection('sqlsrv_MIS')->table('Student$')->where('StudentNo', $request->id)->where('RegID', $request->RegistrationNum)->exists())
+                return redirect()->route('register',['id'=>$request->id]);
+            else 
+                return redirect()->route('validateto')->with('failed',$request->id . $request->RegistrationNum);
         }
-        
-        //return view('auth.register', ['id' => $id], ['fullname' => $fullname]);
+        else
+            return redirect()->route('validateto')->with('failed','credentials');
 
-
-        //if (!empty($id))
-        //{
-        //    return view('auth.register', ['id' => $id], ['fullname' => $fullname]);
-        //}
-        //else
-        //    return view('HomePage');
-        
     }
+
+
+        
+
+
 }

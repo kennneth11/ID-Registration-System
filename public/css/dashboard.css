@@ -11,7 +11,7 @@
     padding: 10px;
 }
 
-.modal-dialog{
+.modal-size{
     width: 1300px;
 }
 
@@ -58,16 +58,19 @@
     padding: 0px 10px 0px 10px;
 }
 
+
+
 .qwer{
     display: none;
 }
 
 .green-border{
-    border-top: 7px solid #308403 ;
+    border-top: 4px solid #15a362 ;
     background-color: rgb(255, 255, 255);
     box-shadow: 0px 5px 10px -7px;
     border-radius: 5px;
     padding: 10px;
+    margin-bottom: 10px;
 }
 
 .yellow-border{
@@ -83,6 +86,10 @@
     font-weight: 700;
     display: inline-block;
     margin-bottom: 8px;
+}
+
+.personal-info h3{
+    margin: 10px 0px 15px 10px;
 }
 
 .personal-info p{
@@ -162,11 +169,6 @@
 h3{
     font-size: 22px;
 }
-.tab-content{
-    background-color: rgb(255, 255, 255);
-    padding: 10px;
-    border-radius: 5px;
-}
 
 
 #btn-create {
@@ -175,6 +177,249 @@ h3{
     margin-bottom: 10px;
   }
 
+.btn-green{
+    background: #308403;
+    border: none;
+    color: white;
+}
+
+.btn-green:hover{
+    background: #308403;
+    border: none;
+    color: white;
+}
+
+.btn-green:active{
+    background: #308403;
+    border: none;
+    color: white;
+}
+
+
+.btn-yellow{
+    background: #ffc501;
+    border: none;
+    color: white;
+}
+
+.btn-yellow:hover{
+    background: #ffc501;
+    border: none;
+    color: white;
+}
+
+.btn-yellow:active{
+    background: #ffc501;
+    border: none;
+    color: white;
+}
+
+
+
+
+
+.modal-section-privacy-notice{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    border-top: 5px solid #308403 ;
+    box-shadow: 0px 5px 10px -7px;
+    border-radius: 5px;
+    padding: 0px 10px 0px 10px;
+}
+
+
+
+.modal-size-pri {
+    width: 90%;
+    
+  }
+
+@media (min-width: 768px) {
+    .modal-size-pri {
+      width: 50%;
+    }
+  }
+
+.modal-section-privacy-notice{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+ 
+#cmu-logo{
+    width: 70px;
+}
+
+.modal-section-privacy-notice h3{
+    font-size: 12px;
+    margin: 0px;
+}
+
+.modal-section-privacy-notice p{
+    margin: 0;
+    text-align: justify;
+}
+
+.modal-section-privacy-notice button{
+    background-color: #ffc501;
+    border-color: #ffc501;
+
+}
+
+
+.modal-section-privacy-notice .header{
+    margin: 10px 0px 10px 0px;
+}
+
+.modal-section-privacy-notice .title{
+    margin: 0px 0px 0px 15px;
+}
+
+.modal-section-privacy-notice .content-body{
+    background-color: #F5F5F5;
+    padding: 20px 0px 30px 0px;
+}
+
+.modal-section-privacy-notice p{
+    padding: 15px 5px 15px 5px;
+    font-size: 10px;
+}
+
+.modal-section-privacy-notice .content-body h4{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+@media (min-width: 768px) {
+    .modal-section-privacy-notice h3{
+        font-size: 20px;
+        margin: 0px;
+    }
+
+    #cmu-logo{
+        width: 120px;
+        margin: 0px 5px 0px 15px;
+    }
+    
+    .modal-section-privacy-notice .header{
+        margin: 10px 0px 10px 0px;
+    }
+
+    .modal-section-privacy-notice .title{
+        margin: 0px 0px 0px 15px;
+    }
+
+    .modal-section-privacy-notice .content-body{
+        background-color: #F5F5F5;
+        padding: 20px 40px 30px 40px;
+    }
+
+    .modal-section-privacy-notice p{
+        padding: 20px 40px 40px 40px;
+        font-size: 16px;
+    }
+
+    .modal-section-privacy-notice .content-body h4{
+        font-size: 19px;
+        font-weight: bold;
+    }
+
+  }
+
+
+.modal-border{
+    border: 0px;
+}
+
+.edit-modal .title{
+    margin-bottom: 8px;
+}
+
+.edit-modal .form-control{
+    margin-bottom: 10px;
+}
+
+.edit-modal .title-form{
+    margin:50px 0px 30px 0px;
+}
+
+
+#transaction-store input[type=text]:read-only {
+    background: #fff;
+    border:0px;
+    width: 100%;
+    padding: 0px;
+    outline: none;
+    border: none;
+    cursor: context-menu;
+  }
+
+  #transaction-store input[type=text]:focus {
+    box-shadow:none;
+    cursor: context-menu;
+  }
+  #transaction-store input[type=text]:hover {
+    cursor: context-menu;
+  }
+
+  #transaction-store .part{
+    background: #fff;
+    border:0px;
+    font-weight: bold;
+    padding: 0px;
+  }
+
+  #transaction-store .title{
+    font-weight: bold;
+  }
+
+  .file-upload{
+      margin-top: -10px;
+  }
+
+  #transaction-store .input-group{
+    margin-bottom: 5px;
+    border:0px;
+  }
+
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+
+
+  .btn-active div{
+    display: inline-block;
+  }
+
+  .logo-prio{
+    height: 45px;
+  }
+
+
+  .input-text-data{
+      padding: 0px;
+      margin: 0px;
+  }
+
+  .img-id{
+    border: 1px solid
+  }
 
 
 
