@@ -10,6 +10,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
+use App\Models\Transaction;
+use Illuminate\Support\Facades\DB;
 
 class RegisteredUserController extends Controller
 {
@@ -33,22 +35,33 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request)
     {
+        $id = $request->id;
+        //$userData = DB::connection('sqlsrv_MIS')->table('Student$')->first();
+        $userData = DB::connection('sqlsrv_MIS')->table('Student$')->get();
+        foreach($userData as $user){
+            if((int)$user->StudentNo == $request->id){
+                $fullname = $user->Firstname . ' ' .  $user->MiddleName . ' ' . $user->Lastname;
+            }
+        }
+
         $request->validate([
-            'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
         $user = User::create([
-            'name' => $request->name,
+            'id'  => $id,
+            'name' => $fullname,
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
-        $user->attachRole('student');
+        $newUser = User::find($id);
+        $newUser->attachRole('student');
 
-        event(new Registered($user));
+        event(new Registered($newUser));
 
-        Auth::login($user);
+        Auth::login($newUser);
+
         return redirect(RouteServiceProvider::HOME);
     }
 
@@ -56,4 +69,30 @@ class RegisteredUserController extends Controller
     {
         return view('auth.registerto');
     }
+
+    public function validateto()
+    {
+        return view('auth.validate');
+    }
+
+    public function validateStudent(Request $request)
+    {
+        $MISData = DB::connection('sqlsrv_MIS')->table('Student$')->get();
+        
+        if (!(User::where('id', $request->id)->exists()) && (DB::connection('sqlsrv_MIS')->table('Student$')->where('StudentNo', $request->id)->exists()))
+        {
+            if(DB::connection('sqlsrv_MIS')->table('Student$')->where('StudentNo', $request->id)->where('RegID', $request->RegistrationNum)->exists())
+                return redirect()->route('register',['id'=>$request->id]);
+            else 
+                return redirect()->route('validateto')->with('failed',$request->id . $request->RegistrationNum);
+        }
+        else
+            return redirect()->route('validateto')->with('failed','credentials');
+
+    }
+
+
+        
+
+
 }

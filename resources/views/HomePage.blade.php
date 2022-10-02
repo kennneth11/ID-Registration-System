@@ -75,6 +75,36 @@
             </div>
         </div>
     </section>
+    <div class="modal fade" id="privacyNotice1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-size-pri modal-xl">
+            <div class="modal-section-privacy-notice modal-content">
+                <div class="">
+                    <div class="d-inline-flex header">
+                        <div>
+                            <img id="cmu-logo" src="{{ asset('images/CMU-LOGO.png') }}">
+                        </div>
+                        <div class="title d-flex align-items-center">
+                            <div>
+                                <h3>Republic of the Philippines</h3>
+                                <h3>CENTRAL MINDANAO UNIVERSITY</h3>
+                                <h3>University Town, Musuan, Maramag, Bukidnon</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class= "content-body">
+                        <h4 class="text-center">Privacy Notice</h4>
+                        <p>In compliance with the Data Privacy Act of 2012 (RA 10173), Central Mindanao University- Public Relations and Information System Office (PRIO) commits to protect and respect the privacy of the personal information being collected through this form. Personal information will be used for ID Printing and inventory of records. The information they collect will be retained in 3 years and will be disposed of securely based on the Policy & Guidelines on the Disposal of Personal Information. The CMU-PRIO has implemented appropriate organizational, technical and physical security measures to ensure the protection of the participants’ personal information. Furthermore, by confirming you hereby consent for the processing of your personal information. For further questions or concerns related to data privacy and security, you may contact the University Data Protection Officer through info_privacy@cmu.edu.ph or visit CMU Data Privacy Website: privacy.cmu.edu.ph.</p>
+                        <div class="d-flex justify-content-center">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer class="text-center d-flex d-lg-flex d-xl-flex d-xxl-flex justify-content-center align-items-center justify-content-lg-center align-items-lg-center justify-content-xl-center align-items-xl-center justify-content-xxl-center align-items-xxl-center" id="homepage-footer">
         <p class="d-xl-flex justify-content-xl-center">Copyright 2021 - 2022 ID Registration System. All Rights Reserverd. <span><a href="#"> Privacy Police</a></span>&nbsp;|&nbsp;<span><a href="#">Terms of Service</a></span>&nbsp;</p>
     </footer>

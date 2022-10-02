@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="icon" type="image/x-icon" href="{{ asset('images/prio-logo-white.png') }}">
     <title>Register</title>
     <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
@@ -12,21 +13,19 @@
 <body>
     <section class="d-flex justify-content-center align-items-center" id="login-section">
         <div class="container text-start d-flex justify-content-center align-items-center" style="width: 1315px;">
+
+
             <form id="login-form" method="POST" action="{{ route('register') }}">
                 @csrf
                 <div id="heading-container">
                     <h2 class="text-center" id="heading-text">ID Registration System</h2>
                 </div>
+
                 <div id="body-container">
                     <div class="text-center" id="logo-container" style="min-width: 0px;margin: 0px;margin-top: 0;margin-bottom: 0px;"><img id="login-logo" src="{{ asset('images/276134669_739682396993313_6310725528540388378_n.png') }}"></div>
                     <div class="mb-3">
-                        <label class="input-title">{{ __('Name') }}</label>
-                        <input id="name" type="text" class="form-control input-data @error('name') is-invalid @enderror" name="name" placeholder="Name" value="{{ old('name') }}" required autocomplete="name" autofocus>
-                        @error('email')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
+                        <label class="input-title">{{ __('Student ID') }}</label>
+                        <input id="id" type="text" class="form-control input-data" name="id" value="{{ request()->id }}" required autocomplete="new-password" readonly>
                     </div>
                     <div class="mb-3">
                         <label class="input-title">{{ __('Email Address') }}</label>
@@ -40,11 +39,6 @@
                     <div class="mb-3">
                         <label class="input-title">{{ __('Password') }}</label>
                         <input id="password" type="password" class="form-control input-data @error('password') is-invalid @enderror" name="password" placeholder="Password" required autocomplete="new-password" >
-                        @error('password')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
                     </div>
                     <div class="mb-3">
                         <label class="input-title">{{ __('Confirm Password') }}</label>

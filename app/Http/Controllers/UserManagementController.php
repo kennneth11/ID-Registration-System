@@ -16,10 +16,10 @@ class UserManagementController extends Controller
 {
     public function index()
     {
-        $admindata = Role::where('name', 'administrator')->first()->users()->get();
-        $studentdata = Role::where('name', 'student')->first()->users()->get();
-        return view('administrator/user-management/user-management',['administrators'=>$admindata],['students'=>$studentdata]);
+        $admindata = Role::where('name', 'administrator')->first()->users()->paginate(3);
+        $studentdata = Role::where('name', 'student')->first()->users()->paginate(3);
         
+        return view('administrator/user-management/user-management',['administrators'=>$admindata],['students'=>$studentdata]);
     }
 
     public function create()
@@ -48,4 +48,6 @@ class UserManagementController extends Controller
         return redirect()->route('dashboard.user-management');
     
     }
+
+
 }
